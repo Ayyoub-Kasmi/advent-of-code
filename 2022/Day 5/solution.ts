@@ -14,7 +14,7 @@ type Crane = {
     procedures: MoveProcedure[];
 }
 
-const stacksPromise = processInputFile<Crane>("input.txt", async (rl:readline.Interface) => {
+const cranePromise = processInputFile<Crane>("input.txt", async (rl:readline.Interface) => {
     const crane:Crane = {
         stacks: [],
         procedures: []
@@ -58,7 +58,7 @@ const stacksPromise = processInputFile<Crane>("input.txt", async (rl:readline.In
     return crane;
 })
 
-stacksPromise
+cranePromise
 .then(crane => {
 
     // // part 1 answer
